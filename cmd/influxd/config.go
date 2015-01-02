@@ -34,11 +34,12 @@ const (
 
 // Config represents the configuration format for the influxd binary.
 type Config struct {
-	Hostname          string `toml:"hostname"`
-	BindAddress       string `toml:"bind-address"`
-	ReportingDisabled bool   `toml:"reporting-disabled"`
-	Version           string `toml:"-"`
-	InfluxDBVersion   string `toml:"-"`
+	Hostname              string `toml:"hostname"`
+	BindAddress           string `toml:"bind-address"`
+	ReportingDisabled     bool   `toml:"reporting-disabled"`
+	AuthenticationEnabled bool   `toml:"authentication-enabled"`
+	Version               string `toml:"-"`
+	InfluxDBVersion       string `toml:"-"`
 
 	Admin struct {
 		Port   int    `toml:"port"`
